@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Straight From You Card Generator</title>
+  <link rel="stylesheet" href="https://use.typekit.net/rbi3tle.css">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+  <h2 style="text-align:center;">Paste YouTube Video IDs (one per line):</h2>
+  <div style="text-align:center;">
+    <textarea id="videoIdsInput" rows="5" cols="50" placeholder="e.g. dQw4w9WgXcQ&#10;YbJOTdZBX1g"></textarea><br/>
+    <button onclick="loadAllVideos()">Generate Cards</button>
+    <button onclick="exportAllCards()">Export Cards as PNG</button>
+    <br/><br/>
+    <input type="checkbox" id="selectAllToggle" onchange="toggleAllCheckboxes(this)">
+    <label for="selectAllToggle">Select/Deselect All</label>
+  </div>
+
+  <!-- Manual Card Builder -->
+  <div class="builder-container">
+    <h2>Build Your Own “Straight From You” Card</h2>
+
+    <label>Username:</label>
+    <input type="text" id="customUsername" placeholder="e.g. @Viewer123" />
+
+    <label>YouTube Channel Link (optional):</label>
+    <input type="text" id="customAvatarLink" placeholder="e.g. https://www.youtube.com/@Viewer123 or channel ID" />
+
+    <label>Comment:</label>
+    <textarea id="customComment" placeholder="Paste or type your comment here..."></textarea>
+
+    <button onclick="createCustomCard()">Create Card</button>
+  </div>
+
+  <!-- Display areas -->
+  <div class="preview">
+    <div id="manualCards"></div>
+    <div id="cardsContainer"></div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="getComments.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
