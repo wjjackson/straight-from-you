@@ -1,4 +1,4 @@
-const API_KEY = 'AIzaSyCLmeJmhxPNXVr-5yUVbmnfLV4O-4oRsa4'; // YouTube API key
+const API_KEY = 'REPLACE THIS'; // YouTube API key
 
 async function fetchTopComments(videoId, min = 17) {
   const allComments = [];
