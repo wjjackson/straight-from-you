@@ -68,7 +68,7 @@ async function createCustomCard() {
 async function getAvatarFromChannel(link) {
   if (!link) return 'https://i.imgur.com/WaUgaKz.png';
 
-  const apiKey = 'AIzaSyCLmeJmhxPNXVr-5yUVbmnfLV4O-4oRsa4';
+  const apiKey = 'REPLACE WITH YOUR API KEY';
   let channelId = '';
 
   try {
